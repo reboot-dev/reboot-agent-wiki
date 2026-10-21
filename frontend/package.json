@@ -4,14 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run dev:portless",
+    "dev:portless": "portless frontend-agent-wiki vite",
+    "dev:ports": "vite",
     "build": "tsc -b && node build.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/ext-apps": "1.5.0",
     "@modelcontextprotocol/sdk": "1.29.0",
-    "@reboot-dev/reboot-api": "1.6.0",
-    "@reboot-dev/reboot-react": "1.6.0",
+    "@reboot-dev/reboot-api": "1.7.1",
+    "@reboot-dev/reboot-react": "1.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0",
@@ -19,12 +21,13 @@
     "zod": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.5",
+    "@types/node": "^26.6.4",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.7.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "portless": "^0.15.7",
     "typescript": "^5.9.2",
-    "vite": "^6.3.5",
-    "vite-plugin-singlefile": "^2.0.3"
+    "vite": "^8.3.4",
+    "vite-plugin-singlefile": "^2.3.4"
   }
 }
